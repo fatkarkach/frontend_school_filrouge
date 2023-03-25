@@ -1,0 +1,19 @@
+<div class="row">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let image of images" class="slide">
+      <div class="card mt-5" style="width: 18rem;">
+        <div class="card-body">
+          <img src="{{ image.img }}" width="100%">
+          <h4 class="card-title mb-4  text-center mt-4">Card subtitle</h4>
+
+          <div class="col text-center">
+            <button class="btn btn-outline-dark">Plus Détailles <i class="bi bi-chevron-double-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ngx-slick-carousel>
+</div>

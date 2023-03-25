@@ -1,0 +1,86 @@
+
+<header>
+<app-navbar></app-navbar>
+  <!--slides navbar-->
+<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
+  <div class="carousel-indicators">
+    <button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img alt="..." class="d-block w-100" src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3410802-1.jpg">
+      <div class="carousel-caption ">
+        <h5 class="animated bounceInRight" style="animation-delay: 1s;">Web Design</h5>
+        <p class="animated bounceInLeft d-none d-md-block " style="animation-delay: 2s ;font-style: italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Learn More</a></p>
+      </div>
+    </div>
+    <div class="carousel-item text-dark">
+      <img alt="..." class="d-block w-100" src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3412002-1.jpg">
+      <div class="carousel-caption">
+        <h5 class="animated bounceInRight" style="animation-delay: 1s">Graphics Design</h5>
+        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s; font-style: italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Learn More</a></p>
+      </div>
+    </div>
+    <div class="carousel-item text-dark">
+      <img alt="..." class="d-block w-100" src="https://www.veritasalabama.com/wp-content/uploads/2018/02/school-stuff.jpg">
+      <div class="carousel-caption">
+        <h5 class="animated bounceInRight" style="animation-delay: 1s">Photography</h5>
+        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s;font-style: italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Learn More</a></p>
+      </div>
+    </div>
+  </div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
+</div>
+ <!-- les services-->
+<app-service-home></app-service-home>
+</header>
+<!-- sections partenaires-->
+  <section class="section-services">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="header-section">
+          <h2 class="title"><span>Nos</span> Partenaires</h2>
+          <p class="description">les associations marocaines reconnues d'utilité publique présente des associations de ce type classées par domaine d'activité et ne prétend pas être exhaustive.</p>
+        </div>
+      </div>
+    </div>
+   <app-partenaires></app-partenaires>
+  </section>
+<!-- sections about -->
+<section class="section-services" style=" background: rgba(245, 245, 245, 0.85);">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="header-section">
+        <h2 class="title"><span>À propos</span> de nous</h2>
+        <p class="description">les associations marocaines reconnues d'utilité publique présente des associations de ce type classées par domaine d'activité et ne prétend pas être exhaustive.</p>
+      </div>
+    </div>
+  </div>
+  <app-aboutus></app-aboutus>
+</section>
+<!-- section choix -->
+<section class="section-services">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="header-section">
+        <h2 class="title"><span>Pourquoi</span>nous choisir?</h2>
+        <p class="description">les associations marocaines reconnues d'utilité publique présente des associations de ce type classées par domaine d'activité et ne prétend pas être exhaustive.</p>
+      </div>
+    </div>
+  </div>
+ <app-choixsection></app-choixsection>
+</section>
+<!-- section activites -->
+<section class="section-services" style=" background: rgba(245, 245, 245, 0.85);">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="header-section">
+        <h2 class="title"><span>Les</span>Activités</h2>
+        <p class="description">les associations marocaines reconnues d'utilité publique présente des associations de ce type classées par domaine d'activité et ne prétend pas être exhaustive.</p>
+      </div>
+    </div>
+  </div>
+<app-activites></app-activites>
+</section>
