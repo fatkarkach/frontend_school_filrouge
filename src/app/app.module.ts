@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './Home/navbar/navbar.component';
 import { HomepageComponent } from './Home/homepage/homepage.component';
 import { ServiceHomeComponent } from './Home/service-home/service-home.component';
 import { PartenairesComponent } from './Home/partenaires/partenaires.component';
@@ -13,6 +13,8 @@ import { AboutusComponent } from './Home/aboutus/aboutus.component';
 import { ChoixsectionComponent } from './Home/choixsection/choixsection.component';
 import { ActivitesComponent } from './Home/activites/activites.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarpageComponent } from './navbarpage/navbarpage.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     ChoixsectionComponent,
     ActivitesComponent,
     FooterComponent,
+    LoginComponent,
+    NavbarpageComponent,
 
   ],
   imports: [
