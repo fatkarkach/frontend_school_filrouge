@@ -1,13 +1,57 @@
 <app-navbarpage></app-navbarpage>
-<section class="section-services" >
-  <div class="row justify-content-center text-center">
-    <div class="col-md-10 col-lg-8">
-      <div class="header-section">
-        <h2 class="title"><span>C</span>onnexion</h2>
-        <p class="description">les associations marocaines reconnues d'utilité publique présente des associations de ce type classées par domaine d'activité et ne prétend pas être exhaustive.</p>
+<section class="section-services">
+  <div class="container register">
+    <div class="row">
+      <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+        <h3>Welcome</h3>
+        <p>You are 30 seconds away from earning your own money!</p>
+        <input type="submit" name="" value="Login" routerLink="/register"/><br/>
+      </div>
+      <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">Remplir le formulaire</h3>
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2" placeholder="Nome d'établissement" value="" />
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control mb-2" placeholder="Numéro Téléphone" value="" />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control mb-2" placeholder="Adresse Email" value="" />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control mb-2"  placeholder="Mode passe" value="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2" placeholder="Adresse" value="" />
+                </div>
+                <div class="form-group">
+                  <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control mb-2" placeholder="Ville" value="" />
+                </div>
+                <div class="form-group mb-2">
+                  <select class="form-control">
+                    <option class="hidden"  selected disabled>Choisir type d'école </option>
+                    <option>Privi</option>
+                    <option>Public</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>                </div>
+                <input type="submit" class="btnRegister"  value="Register"/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </section>
+
 <app-footer></app-footer>

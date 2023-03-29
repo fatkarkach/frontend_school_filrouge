@@ -15,6 +15,7 @@ import { ActivitesComponent } from './Home/activites/activites.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarpageComponent } from './navbarpage/navbarpage.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NavbarpageComponent } from './navbarpage/navbarpage.component';
     FooterComponent,
     LoginComponent,
     NavbarpageComponent,
+    RegisterComponent,
 
   ],
   imports: [
