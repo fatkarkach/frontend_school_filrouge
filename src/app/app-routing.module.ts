@@ -6,6 +6,7 @@ import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {AllactivitesComponent} from "./allactivites/allactivites.component";
 import {ContactComponent} from "./contact/contact.component";
+import {DashboardUserComponent} from "./dashboard-user/dashboard-user.component";
 
 const routes:Routes=[
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -13,7 +14,8 @@ const routes:Routes=[
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'activites',component:AllactivitesComponent},
-  {path:'contact',component:ContactComponent}
+  {path:'contact',component:ContactComponent},
+  {path:'dashboarduser',component:DashboardUserComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
