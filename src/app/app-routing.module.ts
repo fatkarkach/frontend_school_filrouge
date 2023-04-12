@@ -7,6 +7,8 @@ import {RegisterComponent} from "./register/register.component";
 import {AllactivitesComponent} from "./allactivites/allactivites.component";
 import {ContactComponent} from "./contact/contact.component";
 import {DashboardUserComponent} from "./dashboard-user/dashboard-user.component";
+import {ValidateactivitesComponent} from "./dashbordadmin/validateactivites/validateactivites.component";
+import {DashbordadminComponent} from "./dashbordadmin/dashbordadmin.component";
 
 const routes:Routes=[
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -15,7 +17,10 @@ const routes:Routes=[
   {path:'register',component:RegisterComponent},
   {path:'activites',component:AllactivitesComponent},
   {path:'contact',component:ContactComponent},
-  {path:'dashboarduser',component:DashboardUserComponent}
+  {path:'dashboarduser',component:DashboardUserComponent},
+  {path:'validation',component:ValidateactivitesComponent},
+  {path:'admin',component:DashbordadminComponent},
+
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

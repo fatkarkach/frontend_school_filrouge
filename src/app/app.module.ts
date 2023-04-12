@@ -17,10 +17,12 @@ import { LoginComponent } from './login/login.component';
 import { NavbarpageComponent } from './navbarpage/navbarpage.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
-import { ActivitesschoolComponent } from './dashboard-user/activitesschool/activitesschool.component';
 import { AllactivitesComponent } from './allactivites/allactivites.component';
 import { NavbardashboardComponent } from './dashboard-user/navbardashboard/navbardashboard.component';
 import { ContactComponent } from './contact/contact.component';
+import { DashbordadminComponent } from './dashbordadmin/dashbordadmin.component';
+import { NavbaradminComponent } from './dashbordadmin/navbaradmin/navbaradmin.component';
+import { ValidateactivitesComponent } from './dashbordadmin/validateactivites/validateactivites.component';
 
 
 @NgModule({
@@ -38,10 +40,12 @@ import { ContactComponent } from './contact/contact.component';
     NavbarpageComponent,
     RegisterComponent,
     DashboardUserComponent,
-    ActivitesschoolComponent,
     AllactivitesComponent,
     NavbardashboardComponent,
     ContactComponent,
+    DashbordadminComponent,
+    NavbaradminComponent,
+    ValidateactivitesComponent,
 
   ],
   imports: [
