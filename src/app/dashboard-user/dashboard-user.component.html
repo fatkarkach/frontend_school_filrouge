@@ -16,37 +16,34 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
             <div class="form-outline mb-2">
-              <input type="text" id="form1" class="form-control"  placeholder="nom d'activités"/>
+              <input type="text" id="form1" class="form-control"  placeholder="nom d'activités" [(ngModel)]="activites.nome_activites"/>
             </div>
             <div class="form-outline mb-2">
-              <input type="file" id="form2" class="form-control" placeholder="image de l'établissement" />
+              <input type="file" (change)="selectimage($event)" required="" name="file" class="form-control" >
             </div>
             <div class="form-outline mb-2">
-              <input type="text" id="form3" class="form-control" placeholder="description" />
+              <input type="text" id="form3" class="form-control" placeholder="description" [(ngModel)]="activites.description" />
             </div>
             <div class="form-outline mb-2">
-              <input type="date" id="form4" class="form-control" placeholder="date d'activite" />
+              <input type="date" id="form4" class="form-control" placeholder="date d'activite" [(ngModel)]="activites.date_activites" />
             </div>
-            <div class="form-outline mb-2">
-              <input type="tel " id="form5" class="form-control" placeholder="numéro de téléphone"/>
-            </div>
-            <div class="form-outline mb-2">
-              <input type="number" id="form6" class="form-control" placeholder="Durée" />
-            </div>
-            <div class="form-outline mb-2">
-              <input type="text" id="form7" class="form-control" placeholder="Ville" />
-            </div>
-            <div class="form-outline mb-2">
-              <input type="text" id="adresse" class="form-control" placeholder="adresse" />
 
+            <div class="form-outline mb-2">
+              <input type="number" id="form6" class="form-control" placeholder="Durée" [(ngModel)]="activites.duree" />
             </div>
-          </form>
+            <div class="form-outline mb-2">
+              <input type="text" id="form7" class="form-control" placeholder="Ville" [(ngModel)]="activites.ville" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="text" id="adresse" class="form-control" placeholder="adresse"  [(ngModel)]="activites.adresse"/>
+            </div>
+            <input type="hidden"  name="validation"  />
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
-          <button type="button" class="btn btn-dark">Enregistrer</button>
+          <button type="button" class="btn btn-dark" (click)="ajouteractivites()">Enregistrer</button>
         </div>
       </div>
     </div>
@@ -54,32 +51,31 @@
   <table class="table table-bordered table-hover">
     <thead class="text-white text-center bg-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">nome_activites</th>
+      <th scope="col">description</th>
+      <th scope="col">date_activites</th>
+      <th scope="col">duree</th>
+      <th scope="col">ville</th>
+      <th scope="col">adresse</th>
       <th scope="col">status</th>
     </tr>
     </thead>
     <tbody>
-    <tr class="text-center">
-      <th scope="row">1</th>
-      <td >Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td class="d-flex justify-content-center">
-        <!-- Button trigger modal -->
+    <tr class="text-center" *ngFor="let item of allactivites">
+      <th scope="row">{{item.nome_activites}}</th>
+      <td>{{item.description}}</td>
+      <td>{{item.date_activites}}</td>
+      <td>{{item.duree}}</td>
+      <td>{{item.ville}}</td>
+      <td>{{item.adresse}}</td>
+      <td> <button class="btn btn-danger">{{item.validation}}</button></td>
+      <!--<td class="d-flex justify-content-center">
+        &lt;!&ndash; Button trigger modal &ndash;&gt;
         <button type="button" class="btn btn-warning" style="margin-right: 20px" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="bi bi-pencil-square"></i>
         </button>
 
-        <!-- Modal -->
+        &lt;!&ndash; Modal &ndash;&gt;
         <div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -123,14 +119,14 @@
             </div>
           </div>
         </div>
-<!--
+&lt;!&ndash;
         delete popup
--->
-        <!-- Button trigger modal -->
+&ndash;&gt;
+        &lt;!&ndash; Button trigger modal &ndash;&gt;
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="bi bi-trash-fill"></i>
         </button>
-        <!-- Modal -->
+        &lt;!&ndash; Modal &ndash;&gt;
         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -148,7 +144,7 @@
             </div>
           </div>
         </div>
-      </td>
+      </td>-->
     </tr>
     </tbody>
   </table>

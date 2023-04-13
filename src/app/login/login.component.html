@@ -1,9 +1,170 @@
 <app-navbarpage></app-navbarpage>
+<!--<section class="section-services">
+  <div class="container register">
+    <div class="row">
+      <div class="col-md-3 register-left">
+        <h3>Welcome</h3>
+        <p>You are 30 seconds away from earning your own money!</p>
+        <input type="submit" name="" value="Login" routerLink="/register"/><br/>
+      </div>
+      <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">Remplir le formulaire</h3>
+            <form
+              *ngIf="!isSuccessful"
+              name="form"
+              (ngSubmit)="f.form.valid"
+              #f="ngForm"
+              novalidate
+            >
+              <div class="row register-form">
+                <div class="col-md-12 mb-2">
+                  <input type="file" (change)="selectimage($event)" required="" name="file" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mb-2" placeholder="Nome d'établissement"
+                           name="nom_etablissement"
+                           [(ngModel)]="form.nom_etablissement"
+                           required
+                           nom_etablissement
+                           #nom_etablissement="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && nom_etablissement.errors }"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control mb-2" placeholder="Numéro Téléphone"
+                           name="num_tel"
+                           [(ngModel)]="form.num_tele"
+                           required
+                           num_tele
+                           #num_tele="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && num_tele.errors }"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control mb-2" placeholder="Adresse Email"
+                           name="email"
+                           [(ngModel)]="form.email"
+                           required
+                           email
+                           #email="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control mb-2"  placeholder="Mode passe"
+                           name="password"
+                           [(ngModel)]="form.password"
+                           required
+                           password
+                           #password="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mb-2" placeholder="Adresse"
+                           name="adresse"
+                           [(ngModel)]="form.adresse"
+                           required
+                           adresse
+                           #adresse="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && adresse.errors }"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control mb-2" placeholder="Ville"
+                           name="ville"
+                           [(ngModel)]="form.ville"
+                           required
+                           ville
+                           #ville="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && ville.errors }"
+                    />
+                  </div>
+                  <div class="form-group mb-2">
+                    <select class="form-control"
+                            name="niveau_scolaire"
+                            [(ngModel)]="form.niveau_scolaire"
+                            required
+                            niveau_scolaire
+                            #niveau_scolaire="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && niveau_scolaire.errors }"
+
+                    >
+                      <option class="hidden"  selected disabled>Choisir type d'école </option>
+                      <option>primaire</option>
+                      <option>scolaire</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-2">
+                    <select class="form-control"
+                            name="type_ecole"
+                            [(ngModel)]="form.type_ecole"
+                            required
+                            type_ecole
+                            #type_ecole="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && type_ecole.errors }"
+
+                    >
+                      <option class="hidden"  selected disabled>Choisir type d'école </option>
+                      <option>Privi</option>
+                      <option>Public</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
+                            name="Description"
+                            [(ngModel)]="form.Description"
+                            required
+                            Description
+                            #Description="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && Description.errors }"
+                  ></textarea>                </div>
+                  <input type="hidden" value="false"
+                         name="validation"
+                         [(ngModel)]="form.validation"
+                         required
+                         validation
+                         #validation="ngModel"
+                         [ngClass]="{ 'is-invalid': f.submitted && validation.errors }"
+                  >
+&lt;!&ndash;
+                  <input type="submit" class="btnRegister"  value="Register"/>
+
+&ndash;&gt;
+
+                  <div class="col">
+                    <button class="btnRegister" oncli>Sign Up</button>
+                  </div>
+                </div>
+                <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                  Signup failed!<br />{{ errorMessage }}
+                </div>
+
+              </div>
+            </form>
+
+            <div class="alert alert-success" *ngIf="isSuccessful">
+              Your registration is successful!
+              vous pouvez connecter ==>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>-->
+
 <section class="section-services">
   <div class="container register">
     <div class="row">
       <div class="col-md-3 register-left">
-        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
         <h3>Welcome</h3>
         <p>You are 30 seconds away from earning your own money!</p>
         <input type="submit" name="" value="Login" routerLink="/register"/><br/>
@@ -15,35 +176,45 @@
             <div class="row register-form">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control mb-2" placeholder="Nome d'établissement" value="" />
+                  <input type="file" (change)="selectimage($event)" required="" name="file" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <input type="tel" class="form-control mb-2" placeholder="Numéro Téléphone" value="" />
+                  <input type="text" class="form-control mb-2"  required="" placeholder="Nome d'établissement" [(ngModel)]="user.nom_etablissement" />
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control mb-2" placeholder="Adresse Email" value="" />
+                  <input type="tel" class="form-control mb-2" required="" placeholder="Numéro Téléphone" [(ngModel)]="user.num_tele" />
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control mb-2"  placeholder="Mode passe" value="" />
+                  <input type="email" class="form-control mb-2" required="" placeholder="Adresse Email" [(ngModel)]="user.email"/>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control mb-2" required="" placeholder="Mode passe" [(ngModel)]="user.password" />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control mb-2" placeholder="Adresse" value="" />
+                  <input type="text" class="form-control mb-2" required="" placeholder="Adresse" [(ngModel)]="user.adresse" />
                 </div>
                 <div class="form-group">
-                  <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control mb-2" placeholder="Ville" value="" />
+                  <input type="text"  name="txtEmpPhone" required="" class="form-control mb-2" placeholder="Ville" [(ngModel)]="user.ville" />
                 </div>
                 <div class="form-group mb-2">
-                  <select class="form-control">
+                  <select class="form-control" [(ngModel)]="user.type_ecole" required="">
                     <option class="hidden"  selected disabled>Choisir type d'école </option>
                     <option>Privi</option>
                     <option>Public</option>
                   </select>
                 </div>
+                <div class="form-group mb-2">
+                  <select class="form-control" [(ngModel)]="user.niveau_scolaire" required="">
+                    <option class="hidden"  selected disabled>Choisir type d'école </option>
+                    <option>primaire</option>
+                    <option>scolaire</option>
+                  </select>
+                </div>
                 <div class="form-group">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>                </div>
-                <input type="submit" class="btnRegister"  value="Register"/>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"  [(ngModel)]="user.Description" ></textarea></div>
+                <input type="submit" class="btnRegister"  (click)="ajouter()" value="Register"/>
               </div>
             </div>
           </div>

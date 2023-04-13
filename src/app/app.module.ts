@@ -23,6 +23,8 @@ import { ContactComponent } from './contact/contact.component';
 import { DashbordadminComponent } from './dashbordadmin/dashbordadmin.component';
 import { NavbaradminComponent } from './dashbordadmin/navbaradmin/navbaradmin.component';
 import { ValidateactivitesComponent } from './dashbordadmin/validateactivites/validateactivites.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -51,7 +53,10 @@ import { ValidateactivitesComponent } from './dashbordadmin/validateactivites/va
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

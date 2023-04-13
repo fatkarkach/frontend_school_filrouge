@@ -1,0 +1,120 @@
+<app-navbaradmin></app-navbaradmin>
+<div class="container table-responsive py-5 mt-lg-5">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter Un activité</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-outline mb-2">
+              <input type="text" id="form1" class="form-control"  placeholder="nom d'activités"/>
+            </div>
+            <div class="form-outline mb-2">
+              <input type="file" id="form2" class="form-control" placeholder="image de l'établissement" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="text" id="form3" class="form-control" placeholder="description" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="date" id="form4" class="form-control" placeholder="date d'activite" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="tel " id="form5" class="form-control" placeholder="numéro de téléphone"/>
+            </div>
+            <div class="form-outline mb-2">
+              <input type="number" id="form6" class="form-control" placeholder="Durée" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="text" id="form7" class="form-control" placeholder="Ville" />
+            </div>
+            <div class="form-outline mb-2">
+              <input type="text" id="adresse" class="form-control" placeholder="adresse" />
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+          <button type="button" class="btn btn-dark">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-bordered table-hover">
+    <thead class="text-white text-center bg-dark">
+    <tr>
+      <th scope="col">Etablissement</th>
+      <th scope="col">ville</th>
+      <th scope="col">adresse</th>
+      <th scope="col">email</th>
+      <th scope="col">num_tele</th>
+      <th scope="col">validation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="text-center" *ngFor="let item of users">
+      <th  scope="row" >{{item.nom_etablissement}}</th>
+      <td>{{item.ville}}</td>
+      <td>@{{item.adresse}}</td>
+      <td>@{{item.num_tele}}</td>
+      <td>{{item.email}}</td>
+      <td class="d-flex justify-content-center">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning" style="margin-right: 20px" data-bs-toggle="modal" data-bs-target="#infomodal">
+          valider
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="infomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="infoModalLabel">Etabllisement</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-outline mb-2">
+                    <img [src]="'http://127.0.0.1:3000/getimage/'" class="card-img-top" alt="...">
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.nom_etablissement}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.ville}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.adresse}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.email}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.Description}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.niveau_scolaire}}</p>
+                  </div>
+                  <div class="form-outline mb-2">
+                    <p>{{item.type_ecole}}</p>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">valider</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
